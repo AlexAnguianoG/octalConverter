@@ -1,9 +1,9 @@
 function convert(dec) {
-  var a = Math.floor(dec / 8);
-  var b = dec % 8;
-  var c = a * 10 + b;
+  const base = 8;
+  var octalString = dec.toString(base);
+  var octalNum = parseInt(octalString);
 
-  return c;
+  return octalNum;
 }
 
 exports.convert = convert;
