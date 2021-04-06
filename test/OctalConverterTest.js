@@ -44,10 +44,24 @@ describe("givenDecimal8WhenConvertThenOctal10", function () {
 });
 
 describe("givenDecimal95WhenConvertThenOctal137", function () {
-  it("convert(8) = 137", function () {
+  it("convert(95) = 137", function () {
     //Given
     var a = 95;
     var expectedResult = 137;
+
+    //When
+    var actualResult = octalConverter.convert(a);
+
+    //Then
+    assert.strictEqual(expectedResult, actualResult);
+  });
+});
+
+describe("givenDecimal95WhenConvertThenOctal4000", function () {
+  it("convert(2048) = 4000", function () {
+    //Given
+    var a = 2048;
+    var expectedResult = 4000;
 
     //When
     var actualResult = octalConverter.convert(a);
